@@ -192,7 +192,6 @@ def get_single_valuation(code, date, statDate):
     data = get_fundamentals(query(valuation).filter(valuation.code == code), date=date, statDate=statDate)  # 获取财务指标数据
     return data
 
-
 def calculate_change_pct(data):
     """
     涨跌幅 = (当期收盘价-前期收盘价) / 前期收盘价
@@ -202,8 +201,6 @@ def calculate_change_pct(data):
     data['close_pct'] = (data['close'] - data['close'].shift(1)) \
                         / data['close'].shift(1)
     return data
-
-
 
 
 

@@ -61,6 +61,10 @@ def get_csv_quote(code,freq,start=None,end=None):
     data = st.get_csv_price2(code,freq,start,end)
     print(data)
 
+# 使用方式1：手动更新股票数据
 get_csv_quote(global_code,'30m')
-
+# 使用方式2：对股票池更新行情数据
+stock_list = []
+for code in stock_list:
+    get_csv_quote(code, '30m')
 
